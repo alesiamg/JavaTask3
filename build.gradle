@@ -1,0 +1,21 @@
+plugins {
+    id("java")
+    id("application")
+}
+
+group = "org.example"
+version = "1.0-SNAPSHOT"
+application {
+    mainClass.set("org.example.Main") // The main class of the application
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+}
